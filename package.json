@@ -2,8 +2,9 @@
   "name": "mainframe-core",
   "version": "0.1.1",
   "description": "A hive-mind shaped event system.",
-  "main": "lib/mainframe.js",
+  "main": "out/lib/mainframe.js",
   "scripts": {
+    "postinstall": "npm run-script start",
     "start": "rm -rf out/ && babel lib --out-dir out/lib && babel test --out-dir out/test",
     "test": "rm -rf out/ && babel lib --out-dir out/lib && babel test --out-dir out/test && node out/test/mainframe.js"
   },
@@ -30,8 +31,7 @@
     "babel-cli": "^6.3.17",
     "babel-preset-es2015": "^6.3.13",
     "install": "^0.4.1",
-    "keypress": "^0.2.1",
-    "npm": "^3.5.2"
+    "keypress": "^0.2.1"
   },
   "dependencies": {
     "lodash": "^3.10.1"
