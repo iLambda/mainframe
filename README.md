@@ -23,7 +23,8 @@ The mainframe communicate with the agents by sending signals.
 The mainframe can create groups of agents, **taskforces**, to manage tasks more efficiently when broadcasting signals to only a group of agents.
 
 If you need to extend the abilities of the mainframe (add a database, or an evolutive grammar parser), you can by adding **modules**. Modules are simple objects that can be created on the fly or imported, that can extend the capacities of the mainframe. Adding the abilities to the mainframe itself means that all the agents will be able to use them.
-## code
+
+## documentation
 
 To create a mainframe :
 ```js
