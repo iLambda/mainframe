@@ -4,8 +4,8 @@ mainframe is a hive-mind approach to event systems.
 ## install
 **mainframe** is available on [npm](https://www.npmjs.com/package/mainframe-core) as '*mainframe-core*'.
 
-```bash
-$ sudo npm install mainframe-core
+```sh
+$ npm install mainframe-core
 ```
 
 ## principle
