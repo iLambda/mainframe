@@ -26,7 +26,7 @@ mainframe.modules.dock({
   log: (d) => console.log("mainframe> " + d)
 })
 
-// add a keydetector agent
+// add a keydetector agentc
 var id = mainframe.agents.register({
   name: 'keydetector',
   slots: {

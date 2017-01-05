@@ -106,6 +106,42 @@ mainframe.agents.promote(agent, taskforce)
 mainframe.agents.taskforce(agent)      
 ```
 
+### logging
+
+The logger of the mainframe is accessible by the following property :
+```js
+var logger = mainframe.logs
+```
+You can manage logs with the following methods :
+```js
+// create a new log that'll be returned
+mainframe.logs.make(title, loglevel)     
+// erase a log
+// CAUTION : all data will be lost
+mainframe.logs.erase(title)
+// get a log by title
+// (all syntaxes are equivalent)
+mainframe.logs.get('title')
+mainframe.logs['title']
+mainframe.logs.title
+```
+
+A log has a logging threshold set at its creation. Only the messages that have a higher level of importance will be indeed logged.
+
+The different levels are here shown sorted from more important to less important.
+```js
+'EMERGENCY' // most important
+'ALERT'
+'CRITICAL'
+'ERROR'
+'WARNING'
+'NOTICE'
+'INFO'
+'DEBUG'     // less important
+```
+By default, a log titled 'main' with logging level 'INFO' is created. All organs have their own log
+(respectively 'brain', 'commander', and 'dock') with logging level set at 'INFO'.
+
 ### modules
 
 The modules added to the mainframe are simple objects of the form :

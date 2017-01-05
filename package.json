@@ -34,6 +34,7 @@
     "keypress": "^0.2.1"
   },
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "log": "^1.4.0"
   }
 }
