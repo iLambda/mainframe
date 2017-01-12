@@ -64,9 +64,13 @@ var agent = {
   slots: {
     // called when the agent is registered.
     // adding this slot is optional.
+    // NB : the args param always contains the keys
+    // 'id', 'taskforce', and 'self' (a reference to the agent itself)
     register: function (mainframe, args) { }
     // called when the agent is unregistered
     // adding this slot is optional.
+    // NB : the args param always contains the keys
+    // 'id', 'taskforce', and 'self' (a reference to the agent itself)
     unregister: function (mainframe, args) { }
 
     // add your own slots to respond to the mainframe signals.

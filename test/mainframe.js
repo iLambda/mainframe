@@ -5,6 +5,9 @@ import keypress from 'keypress'
 // create a mainframe
 var mainframe = new Mainframe()
 
+// create a log
+mainframe.logs.make('keypress', 'INFO')
+
 // change the brain model
 mainframe.brain.transitions['IDLE'] = { "keypress": "HI" }
 mainframe.brain.transitions['HI'] = { "ok": "IDLE" }
@@ -23,7 +26,9 @@ mainframe.modules.dock({
   dock: () => {},
   undock: () => {},
 
-  log: (d) => console.log("mainframe> " + d)
+  log: (d) => {
+    console.log("mainframe> " + d)
+  }
 })
 
 // add a keydetector agentc
@@ -40,6 +45,8 @@ var id = mainframe.agents.register({
           process.stdin.pause()
           // process the thought
           mainframe.brain.layer('main').process('keypress', { key: key })
+          // log
+          mainframe.logs.keypress.info(`Key ${key.name} has been pressed`, args.self)
           // if we don't hit ctrl+c
           if (!(key.ctrl && key.name === 'c')) {
             // resume capture
