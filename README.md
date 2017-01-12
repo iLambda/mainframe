@@ -78,9 +78,9 @@ var agent = {
 
 You can manage agents with the following methods :
 ```js
-mainframe.agents.register(agent, taskforce) // register an agent
-mainframe.agents.unregister(agent)          // unregister an agent
-mainframe.agents.id(agent)                  // return the id of the agent
+mainframe.agents.register(agent, taskforce, args) // register an agent
+mainframe.agents.unregister(agent, args)          // unregister an agent
+mainframe.agents.id(agent)                        // return the id of the agent
 ```
 
 You can communicate with agents with the following methods (the taskforce argument
