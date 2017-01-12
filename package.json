@@ -1,11 +1,10 @@
 {
   "name": "mainframe-core",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A hive-mind shaped event system.",
   "main": "out/lib/mainframe.js",
   "scripts": {
     "postinstall": "npm run-script start",
-
     "start": "rm -rf out/ && babel lib --out-dir out/lib && babel test --out-dir out/test",
     "test": "rm -rf out/ && babel lib --out-dir out/lib && babel test --out-dir out/test && node out/test/mainframe.js"
   },
