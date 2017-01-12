@@ -54,3 +54,6 @@ var id = mainframe.agents.register({
     }
   }
 })
+
+// say hi
+mainframe.console.log('hi')
