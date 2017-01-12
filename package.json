@@ -1,6 +1,6 @@
 {
   "name": "mainframe-core",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A hive-mind shaped event system.",
   "main": "out/lib/mainframe.js",
   "scripts": {
