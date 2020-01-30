@@ -1,0 +1,32 @@
+{
+    "time": [
+        "what time is it",
+        "what is the time",
+        "what's the time",
+        "what time"
+    ],
+    "date": [
+        "what date is it",
+        "what is the date",
+        "what's the date",
+        "what's today's date",
+        "what's today date",
+        "what is today's date",
+        "what is today date",
+        "what date"
+    ],
+    "date.day": [
+        "what day is it",
+        "what day are we",
+        "what is today"
+    ],
+    "date.year": [
+        "what year is it",
+        "what is the year",
+        "what's the year",
+        "what's the current year",
+        "what is the current year date",
+        "what is the current year date",
+        "what the current year"
+    ]
+}

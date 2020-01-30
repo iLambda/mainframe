@@ -1,0 +1,14 @@
+{
+    "debug": [
+        "debug this program",
+        "debug the program",
+        "launch a test",
+        "test the program",
+        "test this program"
+    ],
+    "debug.product": [
+        "multiply two numbers",
+        "the product of two numbers",
+        "what is the product"
+    ]
+}
