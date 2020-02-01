@@ -1,5 +1,5 @@
 import { Capabilities, Endpoint } from '../network/endpoint'
-import { Fault } from '../../src/fault'
+import { Fault } from '../tools/fault'
 import { Interpret, VoiceInterpret, TypeInterpret } from './nlp/data/interpret'
 import { Utterance } from './nlp/data/utterance'
 import { Controller } from '../computing/controller'

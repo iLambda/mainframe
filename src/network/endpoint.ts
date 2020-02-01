@@ -1,6 +1,6 @@
 import { Authcode } from './authentication/authcode'
 import { Server } from './server'
-import { Fault } from '../fault'
+import { Fault } from '../tools/fault'
 import { default as cfg } from "../../cfg/access.json"
 import { pbkdf2, randomBytes, timingSafeEqual } from 'crypto'
 import { promisify } from 'util'

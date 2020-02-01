@@ -1,5 +1,5 @@
 import cfg = require('../../../cfg/access.json')
-import { Fault } from '../../fault';
+import { Fault } from '../../tools/fault';
 import { Database } from './database'
 import { pbkdf2 } from 'crypto'
 import { promisify } from 'util'

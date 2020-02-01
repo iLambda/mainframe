@@ -5,7 +5,7 @@ import { Recognizer } from './recognition/recognizer'
 import { NaiveRecognizer } from './recognition/baiyesrecognizer'
 import { Interpret } from '../interaction/nlp/data/interpret'
 import { Utterance } from '../interaction/nlp/data/utterance'
-import { Fault } from '../fault'
+import { Fault } from '../tools/fault'
 
 export interface SubjectDictionary {
     /* The root keys */

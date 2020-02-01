@@ -2,7 +2,7 @@ import cfg = require('../../../../cfg/network.json')
 import chalk = require('chalk')
 import ssh2 = require('ssh2')
 import { Writable } from 'stream'
-import { Fault } from '../../../fault'
+import { Fault } from '../../../tools/fault'
 import { Endpoint, Capabilities } from '../../endpoint'
 import { Server } from '../../server'
 import { SSHClient } from './ssh-client'

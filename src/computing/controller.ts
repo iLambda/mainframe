@@ -1,7 +1,7 @@
 import { REPL } from "../interaction/repl"
 import { Link } from './runtime/link'
 import { Net } from './net'
-import { Fault } from "../fault"
+import { Fault } from "../tools/fault"
 import { Utterance } from '../interaction/nlp/data/utterance'
 
 export class Controller {
