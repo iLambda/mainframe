@@ -3,7 +3,7 @@ import { Recognizer } from './recognizer'
 import { Utterance } from '../../interaction/nlp/data/utterance'
 import { Dictionary } from '../../tools/dictionary';
 import { SubjectDictionary, Net } from '../net';
-import { Interpret } from '../../interaction/nlp/data/interpret';
+import { Interpret } from '../../interaction/nlp/interpret';
 import { assert } from '../../tools/assert';
 import { Link, subject } from '../runtime/link';
 

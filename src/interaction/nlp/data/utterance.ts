@@ -1,5 +1,5 @@
 import { Intent } from "./intent"
-import { Interpret, Semantics } from "./interpret"
+import { Interpret, Semantics } from "../interpret"
 
 /* An interpreted text typed/spoken by an user */
 export class Utterance {

@@ -1,5 +1,5 @@
 import { Net } from '../net';
-import { Interpret } from '../../interaction/nlp/data/interpret';
+import { Interpret } from '../../interaction/nlp/interpret';
 import { Utterance } from '../../interaction/nlp/data/utterance';
 
 export abstract class Recognizer { 

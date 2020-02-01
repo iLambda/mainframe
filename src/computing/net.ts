@@ -3,7 +3,7 @@ import { Node } from "./runtime/node"
 import { Link, subject } from "./runtime/link"
 import { Recognizer } from './recognition/recognizer'
 import { NaiveRecognizer } from './recognition/baiyesrecognizer'
-import { Interpret } from '../interaction/nlp/data/interpret'
+import { Interpret } from '../interaction/nlp/interpret'
 import { Utterance } from '../interaction/nlp/data/utterance'
 import { Fault } from '../tools/fault'
 

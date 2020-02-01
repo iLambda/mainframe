@@ -2,9 +2,9 @@ import natural from 'natural'
 import compromise from 'compromise'
 import compromise_numbers from 'compromise-numbers'
 import compromise_sentences from 'compromise-sentences'
-import { Intent } from './intent'
-import { WordMatch } from '../wordmatch'
-import { Utterance } from './utterance'
+import { Intent } from './data/intent'
+import { WordMatch } from './data/wordmatch'
+import { Utterance } from './data/utterance'
 
 /* Import compromise plugins */
 compromise.extend(compromise_numbers);
