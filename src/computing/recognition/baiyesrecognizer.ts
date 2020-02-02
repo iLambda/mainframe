@@ -1,7 +1,7 @@
 import natural from 'natural'
 import { Recognizer } from './recognizer'
 import { Utterance } from '../../interaction/nlp/data/utterance'
-import { Dictionary } from '../../tools/dictionary';
+import { Dictionary } from '../../tools/container/dictionary';
 import { SubjectDictionary, Net } from '../net';
 import { Interpret } from '../../interaction/nlp/interpret';
 import { assert } from '../../tools/assert';

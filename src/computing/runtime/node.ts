@@ -1,7 +1,7 @@
 import 'reflect-metadata'
 import { REPL } from '../../interaction/repl'
 import { Link } from './link'
-import { Dictionary } from '../../tools/dictionary';
+import { Dictionary } from '../../tools/container/dictionary';
 
 /* A node contains multiple links */
 export abstract class Node {

@@ -2,7 +2,7 @@ import 'reflect-metadata'
 import { Node } from './node'
 import { Modality } from '../../interaction/nlp/data/intent'
 import { REPL } from '../../interaction/repl'
-import { Dictionary } from '../../tools/dictionary'
+import { Dictionary } from '../../tools/container/dictionary'
 
 /* A link is a function taking a repl and other arguments */
 export interface Link {

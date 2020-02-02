@@ -1,4 +1,4 @@
-import { Dictionary } from "../tools/dictionary"
+import { Dictionary } from "../tools/container/dictionary"
 import { Node } from "./runtime/node"
 import { Link, subject } from "./runtime/link"
 import { Recognizer } from './recognition/recognizer'

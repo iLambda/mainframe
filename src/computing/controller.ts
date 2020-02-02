@@ -66,6 +66,16 @@ export class Controller {
         }
     }
 
+    /* Ask for an object of given type */
+    public async ask<T>(output: (new (...args:any[]) => T)) : Promise<T> {
+        /* Pick a node */
+        const candidate = this.pick(output.name);
+        /* Check */
+        if (!candidate) { throw new Error(`No link is able to produce an object of type ${output.name}.`); }
+        /* Execute, and return */
+        return await this.run(candidate);
+    }
+
     /* Execute a command */
     public async execute(subject: Utterance | Link) : Promise<void> {
         /* The link to be executed */
