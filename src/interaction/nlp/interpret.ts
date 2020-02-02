@@ -76,6 +76,33 @@ export abstract class Interpret {
         return this.stemmer.tokenizeAndStem(text);
     }
 
+    /* Pluralize */
+    public pluralize(word: string, fun: 'noun' | 'verb') : string {
+        /* Check function */
+        switch (fun) {
+            case 'noun': return new natural.NounInflector().pluralize(word);
+            case 'verb': return new natural.PresentVerbInflector().pluralize(word);
+        }
+    }
+    /* Singularize */
+    public singularize(word: string, fun: 'noun' | 'verb') : string {
+        /* Check function */
+        switch (fun) {
+            case 'noun': return new natural.NounInflector().singularize(word);
+            case 'verb': return new natural.PresentVerbInflector().singularize(word);
+        }
+    }
+
+    /* Numberize */
+    public numberize(word: string, count: number, fun: 'noun' | 'verb') : string {
+        /* Check count */
+        return count === 1 ? this.singularize(word, fun) : this.pluralize(word, fun);
+    }
+    /* Return a numberizer */
+    public numberizer(count: number) {
+        return (fun: 'noun' | 'verb') => ((word: string) => this.numberize(word, count, fun));
+    }
+
 }
 
 export class VoiceInterpret extends Interpret {

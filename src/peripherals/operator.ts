@@ -17,7 +17,12 @@ export class Operator {
     /* The drivers */
     private static drivers: Dictionary<new (cfg: any) => Device> = {};
     /* The devices */
-    private static devices: Dictionary<Device> = {};
+    private static registeredDevices: Dictionary<Device> = {};
+
+    /* The devices */
+    public static get devices() : readonly Device[] {
+        return Object.keys(this.registeredDevices).map(key => this.registeredDevices[key]);
+    }
 
     /* Build an operator */
     private constructor() { }
@@ -35,7 +40,7 @@ export class Operator {
             const type = <string>deviceData.type;
             const cfg = <any>JSON.parse(deviceData.configuration);
             /* Check if type exists */
-            if (type in this.drivers) {
+            if (!(type in this.drivers)) {
                 /* Keep going */
                 continue;
             }
@@ -43,7 +48,7 @@ export class Operator {
             const Driver = this.drivers[type];
             const device = new Driver(cfg);
             /* Register it */
-            this.devices[id] = device;
+            this.registeredDevices[id] = device;
         }
     }
 
@@ -65,7 +70,7 @@ export class Operator {
         /* Register a new device */
         const device : Device = await registration(repl);
         /* Check if any exists already (same driver and same hash) */
-        const anyCollision = Object.entries(this.devices)
+        const anyCollision = Object.entries(this.registeredDevices)
                                    .some(([_, dev]) => dev.devname === device.devname &&
                                                        dev.hash == device.hash);
         if (anyCollision) {
@@ -83,6 +88,10 @@ export class Operator {
         };
         /* Push it into db */
         await this.db('devices').insert(entry);
+        /* Get id to register */
+        const id : number = (await this.db('devices').select('id').where(entry).first()).id;
+        /* Register */
+        this.registeredDevices[id] = device;
         /* Return it */
         return device;
     }

@@ -2,5 +2,10 @@
     "device": [
         "register a new device",
         "add a new device"
+    ],
+    "device.count": [
+        "how many devices",
+        "count the devices",
+        "number of devices"
     ]
 }
