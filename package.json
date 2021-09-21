@@ -33,7 +33,7 @@
     "reflect-metadata": "^0.1.13",
     "require-all": "^3.0.0",
     "sqlite3": "^4.1.1",
-    "ssh2": "^0.8.7",
+    "ssh2": "^1.4.0",
     "typedhue": "^1.0.0",
     "typescript": "^3.7.4",
     "winston": "^3.2.1"
