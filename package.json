@@ -24,7 +24,7 @@
     "compromise-numbers": "0.0.4",
     "compromise-sentences": "0.0.4",
     "express": "^4.17.1",
-    "knex": "^0.20.7",
+    "knex": "^2.4.0",
     "lodash": "^4.17.15",
     "natural": "^0.6.3",
     "object-hash": "^2.0.1",
